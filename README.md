@@ -63,6 +63,36 @@ Agent / WorkProof
 
 - `spec.md` - full product and technical specification
 - `README.md` - project overview and hackathon framing
+- `app/` - FastAPI service implementation
+- `tests/` - API tests
+- `Dockerfile` - production container
+- `okx-ai-listing.md` - marketplace listing draft
+- `DEMO_SCRIPT.md` - 90-second walkthrough script
+
+## Run Locally
+
+```bash
+uv run uvicorn app.main:app --reload
+```
+
+Then open:
+
+- API docs: `http://127.0.0.1:8000/docs`
+- MCP-style manifest: `http://127.0.0.1:8000/mcp`
+- Demo payloads: `http://127.0.0.1:8000/demo`
+
+## Test
+
+```bash
+uv run --extra dev pytest
+```
+
+## Production Notes
+
+- Set `HUMANOPS_API_KEY` before exposing paid endpoints.
+- Deploy behind HTTPS before OKX.AI registration.
+- Use `HUMANOPS_DATA_DIR` for persistent SQLite task storage.
+- Live operation requires a real reviewer pool and payout workflow; the MVP provides task routing, quotes, reviewer submission, and proof packages.
 
 ## Contributor
 
@@ -70,4 +100,4 @@ Agent / WorkProof
 
 ## Status
 
-Hackathon planning repository. Implementation scaffold will add task intake, reviewer portal, proof packages, and WorkProof integration.
+Production-shaped MVP: task intake, safety filter, quote/SLA engine, WorkProof escalation, review submission, proof packages, persistence, tests, Dockerfile, listing copy, and demo script are implemented.
