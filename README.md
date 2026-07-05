@@ -11,6 +11,13 @@ It routes tasks, collects human review evidence, verifies quality, and returns a
 - Core value: human judgment fallback for autonomous agents
 - Demo target: WorkProof escalates a low-confidence research report and HumanOps returns a review package
 
+Hackathon notes:
+
+- Campaign: OKX.AI Genesis, part of the X Layer Build X series.
+- Build goal: create an Agent Service Provider that solves a clear real-world use case.
+- Submission flow: list the ASP on OKX.AI, post a short X walkthrough with `#OKXAI`, then submit the project form before the deadline.
+- Official context: https://www.okx.com/xlayer/build-x-hackathon
+
 ## Problem
 
 Not every agent task can be fully automated. Some deliverables need judgment, factual checking, or subjective QA. Agents need a reliable way to ask humans for help without losing structure, auditability, or payment discipline.
@@ -64,4 +71,3 @@ Agent / WorkProof
 ## Status
 
 Hackathon planning repository. Implementation scaffold will add task intake, reviewer portal, proof packages, and WorkProof integration.
-
